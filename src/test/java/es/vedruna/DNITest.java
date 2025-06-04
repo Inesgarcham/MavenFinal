@@ -9,7 +9,7 @@ public class DNITest {
     public void LetraDNITextoVacio() {
         System.out.println("DNI: Texto Vacio");
         String entrada = "";
-        String esperado = "";
+        boolean esperado = true;
         assertEquals(esperado, DNI.entradaVacia(entrada));
     }
 
