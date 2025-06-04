@@ -14,13 +14,21 @@ public class Main {
 
 
         try {
+
+            if (DNI.entradaVacia(numeros)){
+                throw new IllegalArgumentException("Error, Entrada vacia");
+            }
+
+            if (DNI.entradaTexto(numeros)){
+                throw new NumberFormatException("Error: No se ha introducido números");
+            }
+
             int numeroDNI = Integer.parseInt(numeros);
             char letra = DNI.calcularLetraDNI(numeroDNI);
             System.out.println("Su letra del DNI es: " + letra);
+
         }catch (NumberFormatException e){
             System.out.println("Error: No se ha introducido números");
-        }catch (NullPointerException e) {
-            System.out.println("Error: Entrada nula");
         }catch (IllegalArgumentException e){
             System.out.println("Error: Entrada vacia");
         }

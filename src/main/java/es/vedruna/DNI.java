@@ -14,19 +14,13 @@ public class DNI {
 
 
     //Validación
-    public static boolean entradaNula(String texto) throws NullPointerException{
-        if (texto.equalsIgnoreCase(null)){
-            return true;
-        }
-        return false;
+    public static boolean entradaTexto(String texto) throws NumberFormatException{
+        return texto != "1,2,3,4,5,6,7,8,9,0";
     }
 
 
     public static boolean entradaVacia(String texto) throws IllegalArgumentException{
-        if (texto.equals(" ") || texto.equals("")){
-            return true;
-        }
-        return false;
+        return texto.isEmpty();
     }
 
 
