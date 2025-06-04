@@ -19,9 +19,6 @@ public class Main {
                 throw new IllegalArgumentException("Error, Entrada vacia");
             }
 
-            if (DNI.entradaTexto(numeros)){
-                throw new NumberFormatException("Error: No se ha introducido números");
-            }
 
             int numeroDNI = Integer.parseInt(numeros);
             char letra = DNI.calcularLetraDNI(numeroDNI);
