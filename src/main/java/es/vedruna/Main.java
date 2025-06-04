@@ -12,29 +12,18 @@ public class Main {
         System.out.print("Introduzca su DNI (sin letra): ");
         String numeros = scan.nextLine();
 
-        int numeroDNI = Integer.parseInt(numeros);
-        if (DNI.entradaNula()){
-            DNI.entradaNula()
-        }
 
-        char letra = DNI.calcularLetraDNI(numeroDNI);
-        System.out.println("Su letra del DNI es: " + letra);
-
-
-
-        /*
-        try{
+        try {
             int numeroDNI = Integer.parseInt(numeros);
             char letra = DNI.calcularLetraDNI(numeroDNI);
+            System.out.println("Su letra del DNI es: " + letra);
         }catch (NumberFormatException e){
-            System.out.println("Solo debe introducir números");
+            System.out.println("Error: No se ha introducido números");
+        }catch (NullPointerException e) {
+            System.out.println("Error: Entrada nula");
+        }catch (IllegalArgumentException e){
+            System.out.println("Error: Entrada vacia");
         }
-
-         */
-
-
-
-
 
 
     }
