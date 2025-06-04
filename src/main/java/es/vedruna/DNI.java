@@ -2,8 +2,8 @@ package es.vedruna;
 
 public class DNI {
 
-    //Método
 
+    //Metodo
     public static char calcularLetraDNI(int numeroDNI) {
         char[] letrasDNI = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B',
                 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
@@ -12,10 +12,9 @@ public class DNI {
     }
 
 
-
-    //Validación
+    //Validaciones
     public static boolean entradaTexto(String texto) throws NumberFormatException{
-        return texto != "1,2,3,4,5,6,7,8,9,0";
+        return ! "1,2,3,4,5,6,7,8,9,0".equals(texto);
     }
 
 
