@@ -24,10 +24,10 @@ public class DNI {
 
 
 
-    //Validaciones
+    //Validador
     //La primera validación lanza una excepción si el usuario no ingresa nada.
     //La segunda validación sirve para que el usuario solo inserte números. Lanza excepción si no lo son.
-    public static void entradaTexto(String texto) throws NumberFormatException{
+    public static boolean entradaTexto(String texto) throws NumberFormatException{
 
         if (texto.isEmpty()){
             throw new IllegalArgumentException("Error: Entrada vacia");
@@ -41,7 +41,7 @@ public class DNI {
             }
         }
 
-
+        return false;
     }
 
 }

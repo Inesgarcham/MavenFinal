@@ -5,19 +5,23 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 public class DNITest {
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void LetraDNITextoVacio() {
         System.out.println("DNI: Texto Vacio");
-        String entrada = "";
-        boolean esperado = true;
-        assertEquals(esperado, DNI.entradaVacia(entrada));
+        DNI.entradaTexto("");
     }
 
+    @Test(expected = NumberFormatException.class)
+    public void LetraDNILetras() {
+        System.out.println("Validación: Test sin Números");
+        DNI.entradaTexto("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    }
+
+
     @Test
-    public void LetraDNITextoNulo() {
-        System.out.println("Validación: Test Nulo");
-        assertTrue(DNI.entradaTexto("null"));
-        assertTrue(DNI.entradaTexto("NULL"));
+    public void LetraDNINumeros() {
+        System.out.println("Validación: Test con Números");
+        DNI.entradaTexto("0123456789");
     }
 
 
